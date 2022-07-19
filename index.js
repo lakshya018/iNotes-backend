@@ -16,7 +16,7 @@ app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
 
 app.get("/",(req,res)=>{
-  res.json("server start");
+  res.json("my-notes-backend start");
 })
 
 app.listen(port, () => {
