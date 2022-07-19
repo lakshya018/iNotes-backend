@@ -9,7 +9,7 @@ var cors = require('cors')
 const app = express()
 const port = process.env.PORT || 5000
 
-mongoose.connect("mongodb+srv://lakshya018:soni100ni@cluster0.snbdj.mongodb.net/iNotebook?retryWrites=true&w=majority",{useNewUrlParser:true}).then(() =>{
+mongoose.connect(process.env.MONGO_URI,{useNewUrlParser:true}).then(() =>{
 console.log("Connected to Mongoose Successfully");
 })
 
