@@ -1,13 +1,17 @@
-const connectToMongo = require('./db');
+const mongoose = require('mongoose');
 const express = require('express');
+require('dotenv').config();
 
-connectToMongo();
+
 
 var cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 5000
 
+mongoose.connect("mongodb+srv://lakshya018:soni100ni@cluster0.snbdj.mongodb.net/iNotebook?retryWrites=true&w=majority",{useNewUrlParser:true}).then(() =>{
+console.log("Connected to Mongoose Successfully");
+})
 
 app.use(cors())
 app.use(express.json());
